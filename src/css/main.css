@@ -1,0 +1,47 @@
+@media screen and (min-width:1024px){
+    .movies-container{
+        margin-left: 7vw;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    pagination{
+        width: 100vw;
+    }
+}
+
+@media screen and (min-width:760px)AND (max-width:1024px){
+    .movies-container {
+        margin-left: 5%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    img{
+        width: 40%;
+        
+    }
+}
+
+@media screen and (min-width:320px)AND (max-width:760px){
+    .info__poster--img {
+        width: 110%;
+        
+    }
+    .info{
+        width: 90%;
+    }
+    .movies-container {
+        
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    img{
+        width: 280px;
+        height: 398px;
+    }
+    .pagination__page li{
+        width: 7vw;
+    }
+    .pagination__button{
+        max-width: 9vw;
+    }
+}

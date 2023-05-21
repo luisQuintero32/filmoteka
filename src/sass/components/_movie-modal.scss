@@ -1,0 +1,252 @@
+@import '../colors';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.movie-modal {
+  display: none;
+  padding-top: 10px;
+  background-color: white;
+  flex-direction: column;
+  height: auto;
+  right: 50%;
+  position: absolute;
+  top: 50%;
+  width: 880px;
+  z-index: 2;
+  position: fixed;
+  transform: translate(50%, -50%);
+}
+
+.movie-image {
+  img {
+    border-radius: 5px;
+    width: 396px;
+    height: 477.8px;
+  }
+}
+.movie-modal-title {
+  font-size: 30px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: 'Roboto';
+}
+
+.movie-modal-info {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 400px;
+}
+
+.movie-modal-rate-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+  font-size: 25px;
+}
+
+.movie-modal-votes,
+.movie-modal-popularity,
+.movie-modal-original-title,
+.movie-modal-genre {
+  
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 12px;
+}
+
+.movie-modal-about-title {
+  font-family: 'Roboto';
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.movie-modal-about {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.movie-modal--close-btn {
+  width: 35px;
+  left: 95%;
+  position: relative;
+  top: 10px;
+  font-weight: bold;
+  font-style: bolder;
+  
+  cursor: pointer;
+  border: none;
+  background-color: white;
+}
+
+.movie-modal--body {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin: 20px 20px;
+}
+
+.movie-modal-rate-area--info {
+  width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.movie-modal--btn-container {
+  width: 300px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.add-to-watched--btn {
+  box-sizing: border-box;
+  width: 136px;
+  height: 40px;
+  text-transform: uppercase;
+  background-color: $color-genres;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  cursor: pointer;
+  &:hover {
+    box-sizing: border-box;
+    width: 136px;
+    height: 40px;
+    text-transform: uppercase;
+    color: $color-black;
+    border: 1px solid $color-black;
+    background-color: white;
+    border-radius: 5px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    cursor: pointer;
+  }
+}
+.add-to-queue--btn {
+  box-sizing: border-box;
+  width: 136px;
+  height: 40px;
+  text-transform: uppercase;
+  color: $color-black;
+  border: 1px solid $color-black;
+  border-radius: 5px;
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.add-to-queue--btn:focus {
+  background-color: $color-genres;
+}
+
+.add-to-queue--btn:hover {
+  background-color: $color-genres;
+  border: none;
+}
+
+.add-to-queue--btn:focus {
+  color: $color-footer;
+}
+
+.add-to-queue--btn:hover {
+  color: $color-footer;
+}
+
+@media screen and (min-width: 320px) AND (max-width: 767px) {
+  .movie-modal {
+    overflow-y: auto;
+    position: absolute;
+    width: 280px;
+    height: auto;
+    max-height: 95vh;
+    position: fixed;
+  }
+  .movie-image {
+    img {
+      padding-top: 0px;
+      margin-top: 0px;
+      width: 240px;
+      height: 356.57px;
+    }
+  }
+  .movie-modal-title {
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Roboto';
+  }
+  .movie-modal--body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .movie-modal-info {
+    gap: 10px;
+    width: 240px;
+  }
+  .movie-modal-rate-area--info {
+    width: 240px;
+    font-size: 16px;
+  }
+  .movie-modal-title {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .movie-modal-about-title {
+    font-size: 12px;
+    padding-top: 20px;
+  }
+  .movie-modal--btn-container {
+    padding-top: 20px;
+    width: 220px;
+    padding-left: 20px;
+    gap: 20px;
+  }
+  .movie-modal--close-btn {
+    height: 30px;
+    width: 30px;
+    left: 82%;
+    position: relative;
+    top: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .movie-modal {
+    overflow-y: auto;
+    width: 618px;
+    max-height: 95vh;
+    position: fixed;
+  }
+  .movie-image {
+    img {
+      padding-top: 0px;
+      margin-top: 0px;
+      width: 264px;
+      height: 373.55px;
+    }
+  }
+  .movie-modal--body {
+    display: flex;
+    gap: 20px;
+  }
+  .movie-modal--close-btn {
+    left: 92%;
+    top: 15px;
+  }
+}

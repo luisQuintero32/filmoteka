@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* nav {
+  background-color: hsla(222, 81%, 56%, 0.599);
+  padding: 1rem 0 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+/* .cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+} */
+.navegation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 2rem;
+  gap: 2rem;
+  padding: 1rem;
+  position: relative;
+}
+img {
+  width: 250px;
+  height: 200px;
+}
+
+/* .send {
+  position: absolute;
+} */
+/* footer {
+  display: flex;
+  height: 50px;
+  width: 100vw;
+} */
+.h2 {
+  color: #ffffff;
+}
+

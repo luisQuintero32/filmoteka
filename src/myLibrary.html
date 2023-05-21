@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/stylesSass.css" />
+    <link rel="stylesheet" href="./sass/style2.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+
+    <title>Filmoteka-group4</title>
+  </head>
+  <body>
+    <div class="container">
+      <input style="display: none;"
+                class="search"
+                type="text "
+                required
+                name="searchQuery"
+                autocomplete="off"
+                placeholder="Movie search"
+              />
+              <button class="send" type="submit" style="display: none">
+                <svg
+                  class="send__icon"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M5.5 9.5C7.70914 9.5 9.5 7.70914 9.5 5.5C9.5 3.29086 7.70914 1.5 5.5 1.5C3.29086 1.5 1.5 3.29086 1.5 5.5C1.5 7.70914 3.29086 9.5 5.5 9.5Z"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.5 10.5L8.32495 8.32495"
+                    stroke="white"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+      <header class="header2">
+        <div class="controls">
+          <div class="logo">
+            <svg
+              class="logo__icon"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.82 2H4.18C2.97602 2 2 2.97602 2 4.18V19.82C2 21.024 2.97602 22 4.18 22H19.82C21.024 22 22 21.024 22 19.82V4.18C22 2.97602 21.024 2 19.82 2Z"
+                stroke="#818181"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M7 2V22"
+                stroke="#818181"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 2V22"
+                stroke="#818181"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 12H22"
+                stroke="#818181"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 7H7"
+                stroke="#818181"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 17H7"
+                stroke="#818181"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 17H22"
+                stroke="#818181"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 7H22"
+                stroke="#818181"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <a href="index.html" class="logo__text">Filmoteka</a>
+          </div>
+          <div class="menu-home">
+            <a href="./index.html" class="menu-home__item1">Home</a>
+            <a href="./myLibrary.html" class="menu-home__item2 selected"
+              >My library</a
+            >
+          </div>
+        </div>
+        <div class="menu2">
+          <button class="watched-movies--btn" id="watched-movies--btn">
+            Watched
+          </button>
+          <button class="queue-movies--btn" id="queue-movies--btn">queue</button>
+        </div>
+      </header>
+      <main>
+        <section class="section">
+          <div class="movies-container" id="movies-container"></div>
+        </section>
+
+        <div id="pagination">
+          <button id="library__prev-page" class="pagination__button">
+            <img
+              class="pagination__back pagination__svg"
+              src="./images/arrow-left.svg"
+              alt="search"
+            />
+          </button>
+          <ul class="pagination__page"></ul>
+
+          <button id="library__next-page" class="pagination__button">
+            <img
+              class="pagination__back pagination__svg"
+              src="./images/arrow-right.svg"
+              alt="search"
+            />
+          </button>
+        </div>
+      </main>
+
+      <footer class="footer" id="footer-color">
+        <div class="footer__container">
+          <p class="footer__text">
+            © 2023 | All Rights Reserved | Developed with
+            <svg
+              class="footer__icon"
+              width="14"
+              height="13"
+              viewBox="0 0 14 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7 12.88L6.02 11.9C2.38 8.68 0 6.51 0 3.85C0 1.68 1.68 0 3.85 0C5.04 0 6.23 0.56 7 1.47C7.77 0.56 8.96 0 10.15 0C12.32 0 14 1.68 14 3.85C14 6.51 11.62 8.68 7.98 11.9L7 12.88Z"
+                fill="#FF6B08"
+              />
+            </svg>
+            by<a class="footer__link">GoIT Students</a>
+          </p>
+        </div>
+      </footer>
+      <div class="movie-modal" id="movie-modal">
+        <button class="movie-modal--close-btn" id="movie-modal--close-btn">
+          X
+        </button>
+        <section class="movie-modal--body">
+          <section class="movie-image">
+            <img src="images/imag-header.jpg" alt="" id="movie-modal--image" />
+          </section>
+          <section class="movie-modal-info">
+            <h2 class="movie-modal-title" id="movie-modal-title">Loading</h2>
+            <section class="movie-modal-rate-area">
+              <div class="movie-modal-rate-area--info">
+                <h6>Vote / Votes</h6>
+                <h6 class="movie-modal-votes" id="movie-modal-votes">
+                  loading
+                </h6>
+              </div>
+              <div class="movie-modal-rate-area--info">
+                <h6>Popularity</h6>
+                <h6 class="movie-modal-popularity" id="movie-modal-popularity">
+                  loading
+                </h6>
+              </div>
+              <div class="movie-modal-rate-area--info">
+                <h6>Original Title</h6>
+                <h6
+                  class="movie-modal-original-title"
+                  id="movie-modal-original-title"
+                >
+                  loading
+                </h6>
+              </div>
+              <div class="movie-modal-rate-area--info">
+                <h6>Genre</h6>
+                <h6 class="movie-modal-genre" id="movie-modal-genre">
+                  loading
+                </h6>
+              </div>
+            </section>
+            <h4 class="movie-modal-about-title">About</h4>
+            <h5 class="movie-modal-about" id="movie-modal-about">Loading</h5>
+            <div class="movie-modal--btn-container">
+              <button class="add-to-watched--btn" id="add-to-watched--btn">
+                Add to watched
+              </button>
+              <button class="add-to-queue--btn" id="add-to-queue--btn">
+                Add to queue
+              </button>
+            </div>
+          </section>
+        </section>
+      </div>
+      <script src="index.js" type="module"></script>
+      <script src="./watched.js" type="module"></script>
+      <script src="./queue.js" type="module"></script>
+      <script src="./movieModal.js" type="module"></script>
+    </div>
+  </body>
+</html>
